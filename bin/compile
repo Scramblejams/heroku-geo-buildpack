@@ -52,6 +52,8 @@ function set-default-env (){
   echo "export $1=\${$1:-$2}" >> $PROFILE_PATH
 }
 
+echo "Scramblejams' fork of cyberdelia-geo-buildpack"
+
 # Retrieve versions
 GEOS_VERSION=$(manifest_version "geos")
 GDAL_VERSION=$(manifest_version "gdal")
@@ -123,3 +125,7 @@ set-default-env LD_LIBRARY_PATH "$APP_VENDOR/lib"
 set-default-env CPATH "$APP_VENDOR/include"
 
 echo "-----> Vendoring geo libraries done"
+
+echo "Files in $APP_VENDOR/lib are:"
+filenames=$APP_VENDOR/lib/*
+echo $filenames
