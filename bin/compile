@@ -125,7 +125,7 @@ set-default-env LD_LIBRARY_PATH "$APP_VENDOR/lib"
 set-default-env CPATH "$APP_VENDOR/include"
 
 echo "-----> Vendoring geo libraries done"
-
+echo `find . | grep libgdal`
 echo "Files in /app/vendor:"
 echo `ls -a /app/vendor/`
 echo "Files in /app/.heroku/:"
