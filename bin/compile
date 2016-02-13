@@ -127,6 +127,4 @@ set-default-env CPATH "$APP_VENDOR/include"
 echo "-----> Vendoring geo libraries done"
 
 echo "Files in $APP_VENDOR/lib are:"
-for filename in "$APP_VENDOR"/lib/*; do
-    echo "$filename"
-done
+echo `ls /app/.heroku/vendor/`
