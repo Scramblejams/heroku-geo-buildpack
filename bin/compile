@@ -124,6 +124,9 @@ set-default-env LIBRARY_PATH "$APP_VENDOR/lib"
 set-default-env LD_LIBRARY_PATH "$APP_VENDOR/lib"
 set-default-env CPATH "$APP_VENDOR/include"
 
+mkdir -p /app/.heroku/vendor/lib
+cp /app/tmp/cache/cedar-14/vendor/*/*/lib/*so /app/.heroku/vendor/lib
+
 echo "-----> Vendoring geo libraries done"
 echo "Arguments:"
 echo $@
