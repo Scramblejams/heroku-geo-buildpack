@@ -127,5 +127,6 @@ set-default-env CPATH "$APP_VENDOR/include"
 echo "-----> Vendoring geo libraries done"
 
 echo "Files in $APP_VENDOR/lib are:"
-filenames=$APP_VENDOR/lib/*
-echo $filenames
+for filename in $APP_VENDOR/lib/*; do
+    echo $filename
+done
